@@ -1,16 +1,16 @@
 #include <lua.hpp>
 
 void printvalue(lua_State* L,int idx){
-		if(lua_isnil(L,idx))
-			printf("nil");
-		else if(lua_isboolean(L,idx))
-			printf("%s",lua_toboolean(L,idx)?"true":"false");
-		else if(lua_isinteger(L,idx))
-			printf("%d",(int)lua_tointeger(L,idx));
-		else if(lua_isnumber(L,idx))
-			printf("%f",lua_tonumber(L,idx));
-		else if(lua_isstring(L,idx))
-			printf("%s",lua_tostring(L,idx));
+	if(lua_isnil(L,idx))
+		printf("nil");
+	else if(lua_isboolean(L,idx))
+		printf("%s",lua_toboolean(L,idx)?"true":"false");
+	else if(lua_isinteger(L,idx))
+		printf("%d",(int)lua_tointeger(L,idx));
+	else if(lua_isnumber(L,idx))
+		printf("%f",lua_tonumber(L,idx));
+	else if(lua_isstring(L,idx))
+		printf("%s",lua_tostring(L,idx));
 }
 
 void printtable(lua_State* L,int depth=0){
