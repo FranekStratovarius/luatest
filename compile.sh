@@ -1,2 +1,2 @@
-g++ -Wall -Wextra *.cpp -I . -o main -llua -L../lua 
+g++ -Wall -Wextra ./src/*.cpp -I ./include/ -o main -llua 
 ./main

@@ -1,2 +1,2 @@
-g++ -Wall -Wextra -O0 *.cpp -I . -o main -llua -L../lua -g
+g++ -Wall -Wextra ./src/*.cpp -I ./include/ -o main -llua -O0 -g
 cgdb ./main
